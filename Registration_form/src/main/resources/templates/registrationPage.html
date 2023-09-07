@@ -1,0 +1,93 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Registration Page</title>
+		
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+     rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+	crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+crossorigin="anonymous"></script>
+	</head>
+	
+	<body>
+		
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Form</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/login">Login</a>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+		
+	
+		
+		
+		
+		
+		
+<form th:action="@{/register}" method="post" th:objects="${user}">
+
+			
+<!--Enter the name : <input type="text" name="name" th:value="${name}"><br><br>
+Enter the user_name : <input type="text" name="username" th:value="${username}"><br><br>
+Enter the password : <input type="password" name="password" th:value="${password}"><br><br>
+Select the Gender :Male <input type="radio" name="gender" value="Male"   th:value="${gender}">
+				  Female <input type="radio" name="gender" value="Female"   th:value="${gender}"><br><br>
+Enter the Date of Birth : <input type="date" name="dob" th:value="${dob}"><br><br>
+							
+						
+			<button type="submit">Save Form</button>
+		</form>
+	If already have an account 	<a href="/login">login_here</a>-->
+	
+	
+	 <div class="form-outline mb-4">
+	   <label class="form-label" >Name</label>
+    <input type="text" name="name" th:value="${name}" class="form-control" />
+</div>
+
+ <div class="form-outline mb-4">
+	   <label class="form-label" >Username</label>
+    <input type="text" name="username" th:value="${username}" class="form-control" />
+</div>
+
+ <div class="form-outline mb-4">
+	   <label class="form-label" >Password</label>
+    <input type="password" name="password" th:value="${password}" class="form-control" />
+</div>
+
+ <div class="form-outline mb-4">
+	   <label class="form-label" >Gender</label>
+   Male <input type="radio" name="gender" value="Male"  th:value="${gender}"  />
+   Female <input type="radio" name="gender" value="Female"  th:value="${gender}"  />
+</div>
+
+ <div class="form-outline mb-4">
+	   <label class="form-label" >Date of Birth</label>
+    <input type="date" name="dob" th:value="${dob}" class="form-control" />
+</div>
+
+<button type="button" class="btn btn-primary btn-block mb-4">Sign up</button>
+  
+   <div class="text-center">
+    <p>If already have an account <a href="/login">Login</a></p>
+	
+		
+	</body>
+</html>
